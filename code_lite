@@ -1,0 +1,49 @@
+ #include <stdio.h>
+#include <conio.h>
+
+void main()
+{
+    //Variables
+    int i;
+    int n;
+    int max;
+    int maxi;
+    int j;
+    int dummy;
+    
+    //Enter Array
+    printf("Enter Array Size\n");
+    scanf("%d",&n);
+    int a[n];
+    int b[n];
+    printf("ENTER %d values\n",n);
+    
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    
+    
+    for(i=0;i<n;i++)
+    {
+        max=a[i];
+        maxi=i;
+        for(j=i+1;j<n;j++)
+        {
+            if(max<a[j])
+            {
+                dummy=max;
+                max=a[j];
+                a[j]=dummy;
+            }
+            
+        }
+        b[i]=max;
+    }
+    
+     for(i=0;i<n;i++)
+    {
+        printf("b[%d]=%d\n",i,b[i]);
+    }
+    
+}
