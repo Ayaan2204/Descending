@@ -7,7 +7,6 @@ void main()
     int i;
     int n;
     int max;
-    int maxi;
     int j;
     int dummy;
     
@@ -27,7 +26,6 @@ void main()
     for(i=0;i<n;i++)
     {
         max=a[i];
-        maxi=i;
         for(j=i+1;j<n;j++)
         {
             if(max<a[j])
@@ -38,12 +36,13 @@ void main()
             }
             
         }
-        b[i]=max;
+        a[i]=max;
     }
     
      for(i=0;i<n;i++)
     {
-        printf("b[%d]=%d\n",i,b[i]);
+        printf("a[%d]=%d\n",i,a[i]);
     }
     
 }
+
